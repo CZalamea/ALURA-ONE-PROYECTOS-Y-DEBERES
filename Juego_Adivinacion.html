@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego_Adivinacion</title>
+</head>
+<body>
+
+    <h1>Juego_Adivinacion</h1>
+
+    <script>
+        function imprimir(frase){
+
+            document.write(frase);
+            saltarlinea();
+        }
+
+        function  saltarlinea(){
+            document.write("<br>");
+            document.write("<br>");
+            document.write("<br>");
+
+        }
+
+        function sorteo(n) { 
+            return Math.round(Math.random()*n);
+
+        }  
+
+        var numeroPensado = sorteo(10);
+        var numeroLanzado = parseInt(prompt("Ingrese un número entre 0-10"))
+
+        if(numeroPensado == numeroLanzado){
+            imprimir("usted acertó")
+        }
+        else{
+            if (numeroLanzado > numeroPensado){
+                imprimir("usted erró, el número pensado era menor que tu número”);
+            } 
+            else{
+                imprimir("usted erró, el número pensado era mayor que tu número”);
+            }
+        }
+
+    </script>
+    
+</body>
+</html>

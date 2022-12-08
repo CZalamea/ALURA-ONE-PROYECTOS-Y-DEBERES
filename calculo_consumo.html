@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h3>Alcohol o gasolina?</h3>
+
+    <script>
+
+        function imprimir(frase){
+
+            document.write(frase);
+            saltarlinea();
+        }
+
+        function  saltarlinea(){
+            document.write("<br>");
+            document.write("<br>");
+            document.write("<br>");
+
+        }
+
+        var eficienciaGas = (40)/480;
+        var eficienciaAlc = (40)/300;
+
+        document.write("La eficiencia de la gasolina es :" +eficienciaGas);
+        saltarlinea();
+        document.write("la eficiencia del Alcohol es: " +eficienciaAlc);
+
+        alert("hola");
+
+        saltarlinea();
+
+        imprimir("La eficiencia de la gasolina es :" +eficienciaGas);
+        saltarlinea();
+        imprimir("la eficiencia del Alcohol es: " +eficienciaAlc);
+
+
+    </script>
+    
+</body>
+</html>

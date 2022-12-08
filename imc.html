@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROGRAMA CALCULO DE IMC</title>
+</head>
+<body>
+    <h1> PROGRAMA CALCULO DE IMC </h1>
+
+    <script>
+        function imprimir(frase){
+
+            document.write(frase);
+            saltarlinea();
+        }
+
+        function  saltarlinea(){
+            document.write("<br>");
+            document.write("<br>");
+            document.write("<br>");
+
+        }
+
+        function calcularIMC (peso, altura, nombre){
+
+            imc = peso / (altura * altura);
+            return(imc);
+
+
+        }
+
+        //pesoInformado = 71;
+        //alturaInformado = 1.72;
+
+        nombre = prompt("informe su nombre")
+        pesoInformado = prompt(nombre + ", informe su perso")
+        alturaInformado = prompt(nombre + ", informe su altura")
+
+
+        imcCalculado = calcularIMC(pesoInformado, alturaInformado);
+        imprimir(nombre + ", El imc calculado es: " + imcCalculado);
+
+        pesoCesar = 110
+        alturaCesar = 1.80
+
+        imcCesar = pesoCesar / (alturaCesar * alturaCesar)
+
+        //calcularIMC(pesoCesar, alturaCesar)
+
+        imprimir("El IMC de Cesar es: " + imcCesar)
+
+        pesoAl = 150
+        alturaAl = 1.70
+
+        imcAL = calcularIMC(pesoAl, alturaAl)
+        imprimir("El IMC de Al es: " + imcAL) 
+
+        calcularIMC(71, 1.72, "Cristhian")
+
+
+        if (imcCalculado < 18.5) {
+
+            imprimir("Abajo de lo recomendado");
+
+        }
+
+        if (imcCalculado >=18.5 && imcCalculado < 25) {
+
+            imprimir("IMC esta dentro de intervalo normal");
+
+        }
+
+        if (imcCalculado >= 25 && imcCalculado < 30 ) {
+
+            imprimir("IMC es pre obesidad");
+
+        }
+
+        if (imcCalculado >= 30 ) {
+
+            imprimir("IMC considerado obesidad");
+
+        }
+
+        
+    </script>
+
+</body>
+</html>

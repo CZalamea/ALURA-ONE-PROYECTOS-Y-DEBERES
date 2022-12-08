@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROGRAMA CALCULO DE PUNTOS DE UN EQUIPO DE FUTBOL</title>
+</head>
+<body>
+    <h1> PROGRAMA CALCULO DE PUNTOS DE UN EQUIPO DE FUTBOL </h1>
+
+    <script>
+        function imprimir(frase){
+
+            document.write(frase);
+            saltarlinea();
+        }
+
+        function  saltarlinea(){
+            document.write("<br>");
+            document.write("<br>");
+            document.write("<br>");
+
+        }
+
+        var victorias = parseInt(prompt("Informe la cantidad de victorias"));
+        var empates = parseInt(prompt("Informa la cantidad de empates"));
+
+        var puntosTotal = (victorias * 3) + empates;
+
+        imprimir("El total de puntos del equipo es : " + puntosTotal);
+
+        if (puntosTotal > 28) {
+
+            imprimir("El equipo esta mejor que el ano pasado");
+
+        }
+
+        if (puntosTotal) < 28 {
+
+            imprimir("El equipo esta peor que el ano pasado");
+
+        }
+
+        if (puntosTotal == 28) {
+
+            imprimir("El equipo esta igual que el ano pasado");
+
+        }
+        
+        
+    </script>
+
+</body>
+</html>
