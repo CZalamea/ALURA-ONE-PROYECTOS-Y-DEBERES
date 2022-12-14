@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de adivinacion</title>
+</head>
+<body>
+    <h1>Juego de adivinacion </h1>
+
+    <script>
+        function imprimir(frase){
+
+            document.write(frase);
+            saltarlinea();
+        }
+
+        function  saltarlinea(){
+            document.write("<br>");
+            document.write("<br>");
+            document.write("<br>");
+
+        }
+
+        for(var lineas =1;lineas<=3;lineas++) {
+
+            for(var columnas = 1;columnas<=10;columnas++){
+                document.write("*");
+            }
+            saltarlinea();
+
+        }
+
+        saltarlinea();
+        saltarlinea();
+
+        imprimir("**********");
+        imprimir("**********");
+        imprimir("**********");
+        
+        imprimir("fin");
+    </script>
+
+</body>
+</html>

@@ -25,19 +25,39 @@
 
 
         var numeroPensado = Math.round(Math.random()*10);
-        var numeroLanzado = parseInt(prompt("Ingrese un numero entre 0 - 10"));
+        var intentos = 3;
+        var contador = 1;
+
+        while(contador <= intentos){
+
+            var numeroLanzado = parseInt(prompt("Ingrese un numero entre 0 - 10"));
+
+            if(numeroPensado == numeroLanzado){
+
+                alert("Usted acerto en el intento: "+ intento + "el numero pensado era " +numeroPensado);
+                break;
+    
+            }
+            
+            else {
+                 alert("usted erro ");
+    
+            }
+            contador++;
+        }
 
         if(numeroPensado == numeroLanzado){
 
-            imprimir("Usted acerto");
+            imprimir("Usted acerto en el intento: "+ contador + "el numero pensado era " +numeroPensado);
 
         }
         
         else {
-             imprimir("usted erro, ek numero pensado es: " +numeroPensado );
+             imprimir("usted erro, el numero pensado era: " +numeroPensado);
 
         }
         
+        imprimir("fin");
     </script>
 
 </body>

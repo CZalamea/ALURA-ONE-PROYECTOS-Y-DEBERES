@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        function imprimir(frase){
+
+            document.write(frase);
+            saltarlinea();
+        }
+    
+        function  saltarlinea(){
+            document.write("<br>");
+            document.write("<br>");
+            document.write("<br>");
+    
+        }
+
+        var numeroMiembros = parseInt(prompt("Ingrese la cantidad de los miembros de su familia"));
+        var contador = 1;
+        var totalEdades = 0;
+
+        while(contador <= numeroMiembros){
+            
+            edad = parseInt(prompt("ingrese la edad del familiar"));
+            totalEdades = totalEdades + edad;
+            contador++;
+
+        }
+
+        mediaEdades = totalEdades/numeroMiembros;
+
+        imprimir("la media de las edades de la familia es: " + mediaEdades);
+        imprimir("fin");
+
+       
+
+
+
+    </script>
+    
+</body>
+</html>

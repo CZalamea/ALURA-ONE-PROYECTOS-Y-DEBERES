@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+    function imprimir(frase){
+
+        document.write(frase);
+        saltarlinea();
+    }
+
+    function  saltarlinea(){
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+
+    }
+
+
+    var anioMundial = 1930;
+    var limite = parseInt(prompt("Ingrese el anio limite para calcular "));
+
+
+    alert("Hubo mundila en la fifa en el ano " +anioMundial);
+
+    while (anioMundial =< limite) {
+
+        alert("Hubo mundial de la fifa en el anio " +anioMundial);
+        anioMundial = anioMundial+4;
+
+    }
+
+    imprimir("fin");
+
+
+    
+    </script>
+</body>
+</html>
