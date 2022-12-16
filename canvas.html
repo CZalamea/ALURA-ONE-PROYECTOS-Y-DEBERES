@@ -1,0 +1,46 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+
+    <canvas  width="600" height="400"></canvas>
+
+    <script>
+
+        
+        var pantalla = document.querySelector("canvas");
+        var pincel = pantalla.getContext("2d");
+        
+        pincel.fillStyle = "lightgrey"  //popiedad
+        pincel.fillRect(0,0,600,400); //funcion
+
+        pincel.fillStyle = "green"  //popiedad
+        pincel.fillRect(0,0,200,400); //funcion
+
+        pincel.fillStyle = "red"  //popiedad
+        pincel.fillRect(400,0,200,400); //funcion
+
+        pincel.fillStyle = "yellow"  //popiedad
+        pincel.beginPath();
+        pincel.moveTo(300,200);
+        pincel.lineTo(200,400);
+        pincel.lineTo(400,400);
+        pincel.fill();
+
+        pincel.fillStyle = "blue"  //popiedad
+        pincel.beginPath();
+        pincel.arc(300,200,50,0,2*3.14);
+        
+        pincel.fill();
+
+
+
+    </script>
+    
+  </body>
+  </html>
