@@ -1,0 +1,92 @@
+
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+    pincel.fillStyle = "gray";
+    pincel.fillRect(0, 0, 600, 400);
+
+    var radio = 10;
+    var xAleatoreo;
+    var yAleatoreo;
+    
+
+    function disenarCircunferencia(x,y, radio, color){
+
+        pincel.fillStyle = color;
+        pincel.beginPath();
+        pincel.arc(x,y,radio,0,2*Math.PI);
+        pincel.fill()
+
+    }
+
+    function limpiarPantalla(){
+
+        pincel.clearRect(0,0,600,400);
+
+    }
+
+   /* function exibirMensaje(){
+
+
+        console.log("mostrar mensaje");
+
+
+    }*/
+
+    var x= 0;
+    
+    function actualizarPantalla(){
+
+        limpiarPantalla();
+        xAleatoreo = sortearPosicion(600);
+        yAleatoreo = sortearPosicion(400);
+        disenarObjetivo(xAleatoreo,yAleatoreo);
+        x++;
+       
+        
+    }
+
+        function disenarObjetivo(x,y){
+        disenarCircunferencia(x,y,radio+20,"red");
+        disenarCircunferencia(x,y,radio+10,"white");
+        disenarCircunferencia(x,y,radio,"red");
+
+        }
+
+        function sortearPosicion(maximo,y){
+
+            return Math.floor(Math.random( )*maximo );
+        }
+         
+    /*var xAleatoreo = sortearPosicion(600);
+    var yAleatoreo = sortearPosicion(400);
+    disenarObjetivo(xAleatoreo,yAleatoreo);*/
+    
+    setInterval(actualizarPantalla,1000);
+
+    function disparar(evento) {
+
+         var x = evento.pageX - pantalla.offsetLeft;
+         var y = evento.pageY - pantalla.offsetTop;
+
+         if((x < xAleatoreo + radio)&&(x > xAleatoreo- radio)&&(y<yAleatoreo + radio)&&(y >yAleatoreo-radio)){
+            
+            alert("tiro certero");
+            
+        }
+
+        
+
+    }
+
+    pantalla.onclick = disparar;
+
+    //actualizarPantalla();
+
+    
+    //disenarCircunferencia(20,20,10)
+
+</script>
