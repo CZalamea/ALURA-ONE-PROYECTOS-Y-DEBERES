@@ -4,9 +4,11 @@
 
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
         <title>Barbería Alura</title>
-
-        <link rel="stylesheet" href="style-home.css">
+        <!--<link rel="stylesheet" href="reset.css"-->
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
         
         
     </head>
@@ -14,41 +16,59 @@
     <body>
 
         <header>
-            <h1 class="titulo-principal">Barberia Alura</h1>
-        </header>
+            <div class="caja">
+                <h1><img src="imagenes/logo.png"></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            </div>
+        </header> 
 
-        <img id="banner" src="banner/banner.jpg">
+        <img class="banner" src="banner/banner.jpg">
+        <main>
+            <section class="principal">
+                <h2 class="titulo-principal">Sobre la Barbería Alura</h2>
 
-        <div class="principal">
-            <h2 class="titulo-centralizado">Sobre la Barbería Alura</h2>
+                <img class="utecilios" src="imagenes/utensilios[1].jpg" alt="utensilios de un barbero">
 
-            <p>Ubicada en el corazón de la ciudad, la <strong>Barbería Alura</strong> trae para el mercado lo que hay de mejor para su cabello y barba. Fundada en 2020, la Barbería Alura ya es destaque en la ciudad y conquista nuevos clientes diariamente.</p>
+                <p>Ubicada en el corazón de la ciudad, la <strong>Barbería Alura</strong> trae para el mercado lo que hay de mejor para su cabello y barba. Fundada en 2020, la Barbería Alura ya es destaque en la ciudad y conquista nuevos clientes diariamente.</p>
+                <p id="mision"><em>Nuestra misión es: <strong>"Proporcionar autoestima y calidad de vida a nuestros clientes"</strong>.</em></p> 
+                <p>Ofrecemos profesionales experimentados que están constantemente observando los cambios y movimiento en el mundo de la moda, para así ofrecer a nuestros clientes las últimas tendencias. El atendimiento posee un padrón de excelencia y agilidad, garantizando calidad y satisfacción de nuestros clientes.</p> 
+            </section>
 
-            <p id="mision"><em>Nuestra misión es: <strong>"Proporcionar autoestima y calidad de vida a nuestros clientes"</strong>.</em></p>
+            <section class="mapa">
+                <h3 class="titulo-principal">Nuestra ubicacion</h3>
+                <p>Nuestro establecimiento esta ubicado en el corazon de la ciudad</p>
 
-            <p>Ofrecemos profesionales experimentados que están constantemente observando los cambios y movimiento en el mundo de la moda, para así ofrecer a nuestros clientes las últimas tendencias. El atendimiento posee un padrón de excelencia y agilidad, garantizando calidad y satisfacción de nuestros clientes.</p> 
+                <div class="mapa-contenido">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d732.478525083404!2d-79.91094233329785!3d-2.1542964946958882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d6d432861e037%3A0x55eb5b236d67dde5!2sBarberia%20el%20Chelo!5e0!3m2!1ses!2sec!4v1672778455292!5m2!1ses!2sec" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </section>
+            <section class="diferenciales">
+                <h3 class="titulo-principal">Diferenciales</h3>
 
-        </div>
-
-        <div class="Diferenciales">
-            <h3 class="titulo-centralizado">Diferenciales</h3>
-
-            <ul>
-
-                <li class="items">- Atencion personalizada a los clientes</li> 
-                <li class="items">- Espacio Diferenciado</li> 
-                <li class="items">- Localizacion</li> 
-                <li class="items">- Profesionales calificados</li> 
-        
-            </ul>
-
-            <img src="diferenciales/diferenciales.jpg" class="imagenDiferenciales">
-
-        </div>
-        
-        
-
-
+                <div class="contenido-diferenciales">
+                    <ul class="lista-diferenciales">
+                        <li class="items">Atencion personalizada a los clientes</li>
+                        <li class="items">Espacio Diferenciado</li>
+                        <li class="items">Localizacion</li>
+                        <li class="items">Profesionales calificados</li>
+                        <li class="items">Puntualidad</li>
+                        <li class="items">Limpieza</li>
+                    </ul><img src="diferenciales/diferenciales.jpg" class="imagen-diferenciales">
+                </div>
+                <div class="video">
+                    <iframe width= 100% height="315" src="https://www.youtube.com/embed/wcVVXUV0YUY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </section>
+        </main> 
+        <footer>
+            <img src="imagenes/logo-blanco.png">
+            <p class="copyright">&copy Copyright Barberia Alura - 2022</p>
+        </footer>
     </body>
-
 </html>
